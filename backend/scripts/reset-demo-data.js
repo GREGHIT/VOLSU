@@ -7,41 +7,54 @@ const prisma = new PrismaClient();
 const password = "123456";
 const templatesFile = path.join(__dirname, "..", "data", "schedule-weekly-templates.json");
 
-const groupBlueprints = [
-  { name: "ИС-21-1", faculty: "Институт информатики" },
-  { name: "ИС-21-2", faculty: "Институт информатики" },
+const groups = [
+  { name: "ИС-21-1", faculty: "Институт информационных технологий" },
+  { name: "ИС-21-2", faculty: "Институт информационных технологий" },
   { name: "ПМИ-22-1", faculty: "Факультет прикладной математики" },
-  { name: "ПМИ-22-2", faculty: "Факультет прикладной математики" },
   { name: "ИБ-23-1", faculty: "Факультет кибербезопасности" },
-  { name: "ИБ-23-2", faculty: "Факультет кибербезопасности" },
-  { name: "ЭК-24-1", faculty: "Экономический факультет" },
-  { name: "ЭК-24-2", faculty: "Экономический факультет" },
-  { name: "МО-24-1", faculty: "Факультет прикладной математики" },
-  { name: "МО-24-2", faculty: "Факультет прикладной математики" },
-  { name: "СА-25-1", faculty: "Факультет кибербезопасности" },
-  { name: "УП-24-3", faculty: "Экономический факультет" },
 ];
 
-const staffBlueprints = [
+const staff = [
   {
     email: "admin@lms.local",
     role: "ADMIN",
     fullName: "Смирнов Артем Дмитриевич",
-    faculty: "Администрация LMS",
-    staffTitle: "Администратор LMS",
+    faculty: "Администрация СДО",
+    staffTitle: "Администратор системы",
     staffCategory: "ADMINISTRATION",
-    accessSystems: ["LMS Core", "Analytics Console", "Content Library", "Audit Log", "Database Tools", "Deployment"],
-    permissions: ["COURSES_VIEW", "COURSES_EDIT", "TESTS_VIEW", "TESTS_EDIT", "TESTS_INSPECT", "SCHEDULE_EDIT", "ANALYTICS_VIEW", "ANALYTICS_EXPORT", "STUDENTS_MANAGE", "STAFF_MANAGE", "SYSTEMS_MANAGE"],
+    accessSystems: ["LMS Core", "Analytics Console", "Content Library", "Audit Log", "Database Tools"],
+    permissions: [
+      "COURSES_VIEW",
+      "COURSES_EDIT",
+      "TESTS_VIEW",
+      "TESTS_EDIT",
+      "TESTS_INSPECT",
+      "SCHEDULE_EDIT",
+      "ANALYTICS_VIEW",
+      "ANALYTICS_EXPORT",
+      "STUDENTS_MANAGE",
+      "STAFF_MANAGE",
+      "SYSTEMS_MANAGE",
+    ],
   },
   {
     email: "teacher1@lms.local",
     role: "TEACHER",
     fullName: "Иванова Анна Сергеевна",
-    faculty: "Институт информатики",
+    faculty: "Институт информационных технологий",
     staffTitle: "Старший преподаватель",
     staffCategory: "TEACHER",
     accessSystems: ["LMS Core", "Schedule Editor", "Analytics Console", "Content Library", "Notifications"],
-    permissions: ["COURSES_VIEW", "COURSES_EDIT", "TESTS_VIEW", "TESTS_EDIT", "TESTS_INSPECT", "SCHEDULE_EDIT", "ANALYTICS_VIEW", "STUDENTS_MANAGE"],
+    permissions: [
+      "COURSES_VIEW",
+      "COURSES_EDIT",
+      "TESTS_VIEW",
+      "TESTS_EDIT",
+      "TESTS_INSPECT",
+      "SCHEDULE_EDIT",
+      "ANALYTICS_VIEW",
+      "STUDENTS_MANAGE",
+    ],
   },
   {
     email: "teacher2@lms.local",
@@ -50,365 +63,389 @@ const staffBlueprints = [
     faculty: "Факультет прикладной математики",
     staffTitle: "Преподаватель",
     staffCategory: "TEACHER",
-    accessSystems: ["LMS Core", "Schedule Editor", "Analytics Console", "Content Library"],
-    permissions: ["COURSES_VIEW", "COURSES_EDIT", "TESTS_VIEW", "TESTS_EDIT", "TESTS_INSPECT", "SCHEDULE_EDIT", "ANALYTICS_VIEW", "STUDENTS_MANAGE"],
-  },
-  {
-    email: "teacher3@lms.local",
-    role: "TEACHER",
-    fullName: "Кузнецов Роман Игоревич",
-    faculty: "Факультет кибербезопасности",
-    staffTitle: "Доцент",
-    staffCategory: "TEACHER",
-    accessSystems: ["LMS Core", "Schedule Editor", "Analytics Console", "Content Library"],
-    permissions: ["COURSES_VIEW", "COURSES_EDIT", "TESTS_VIEW", "TESTS_EDIT", "TESTS_INSPECT", "SCHEDULE_EDIT", "ANALYTICS_VIEW", "STUDENTS_MANAGE"],
-  },
-  {
-    email: "developer1@lms.local",
-    role: "ADMIN",
-    fullName: "Орлова Мария Викторовна",
-    faculty: "Платформа LMS",
-    staffTitle: "Frontend разработчик",
-    staffCategory: "DEVELOPER",
-    accessSystems: ["LMS Core", "Analytics Console", "Content Library", "Database Tools", "Deployment"],
-    permissions: ["COURSES_VIEW", "TESTS_VIEW", "TESTS_INSPECT", "ANALYTICS_VIEW", "STAFF_MANAGE", "SYSTEMS_MANAGE"],
-  },
-  {
-    email: "developer2@lms.local",
-    role: "ADMIN",
-    fullName: "Фролов Егор Павлович",
-    faculty: "Платформа LMS",
-    staffTitle: "Backend разработчик",
-    staffCategory: "DEVELOPER",
-    accessSystems: ["LMS Core", "Audit Log", "Database Tools", "Deployment"],
-    permissions: ["COURSES_VIEW", "TESTS_VIEW", "TESTS_INSPECT", "ANALYTICS_VIEW", "STAFF_MANAGE", "SYSTEMS_MANAGE"],
+    accessSystems: ["LMS Core", "Schedule Editor", "Content Library"],
+    permissions: ["COURSES_VIEW", "COURSES_EDIT", "TESTS_VIEW", "TESTS_EDIT", "SCHEDULE_EDIT"],
   },
 ];
 
-const firstNames = ["Алина", "Илья", "Мария", "Роман", "Софья", "Артем", "Максим", "Полина", "Кирилл", "Виктория", "Даниил", "Тимур"];
-const lastNames = ["Соколова", "Иванов", "Петрова", "Николаев", "Кузнецова", "Орлов", "Федорова", "Смирнов", "Попова", "Зайцев", "Лебедев", "Андреев"];
-const middleNames = ["Игоревна", "Сергеевич", "Максимовна", "Алексеевич", "Андреевна", "Павлович", "Дмитриевна", "Константинович", "Ильинична", "Викторович"];
-
-const courseBlueprints = [
-  { title: "Алгоритмы и структуры данных", teacherEmail: "teacher1@lms.local", groupNames: ["ИС-21-1", "ИС-21-2"], subjectCode: "CS-204", subjectName: "Алгоритмы", department: "Кафедра информатики", semester: "Осенний", studyYear: "2026/2027", format: "Очный", campus: "Главный корпус", courseNumber: 2 },
-  { title: "Базы данных", teacherEmail: "teacher1@lms.local", groupNames: ["ИС-21-1", "МО-24-1"], subjectCode: "DB-310", subjectName: "Базы данных", department: "Кафедра информатики", semester: "Осенний", studyYear: "2026/2027", format: "Очный", campus: "Главный корпус", courseNumber: 2 },
-  { title: "Разработка веб-приложений", teacherEmail: "teacher1@lms.local", groupNames: ["ИС-21-2", "ПМИ-22-1"], subjectCode: "WEB-220", subjectName: "Веб-разработка", department: "Кафедра информатики", semester: "Весенний", studyYear: "2026/2027", format: "Смешанный", campus: "Главный корпус", courseNumber: 3 },
-  { title: "Дискретная математика", teacherEmail: "teacher1@lms.local", groupNames: ["ПМИ-22-1", "МО-24-2"], subjectCode: "DM-115", subjectName: "Дискретная математика", department: "Кафедра прикладной математики", semester: "Весенний", studyYear: "2026/2027", format: "Очный", campus: "Корпус B", courseNumber: 2 },
-  { title: "Математический анализ", teacherEmail: "teacher1@lms.local", groupNames: ["ПМИ-22-2", "МО-24-1"], subjectCode: "MAT-101", subjectName: "Математический анализ", department: "Кафедра прикладной математики", semester: "Осенний", studyYear: "2026/2027", format: "Очный", campus: "Главный корпус", courseNumber: 1 },
-  { title: "Теория вероятностей", teacherEmail: "teacher1@lms.local", groupNames: ["ПМИ-22-2", "МО-24-2"], subjectCode: "STAT-201", subjectName: "Теория вероятностей", department: "Кафедра прикладной математики", semester: "Весенний", studyYear: "2027/2028", format: "Очный", campus: "Корпус B", courseNumber: 3 },
-  { title: "Информационная безопасность", teacherEmail: "teacher1@lms.local", groupNames: ["ИБ-23-1", "СА-25-1"], subjectCode: "IS-220", subjectName: "Информационная безопасность", department: "Кафедра кибербезопасности", semester: "Осенний", studyYear: "2026/2027", format: "Очный", campus: "Корпус C", courseNumber: 3 },
-  { title: "Сетевые технологии", teacherEmail: "teacher1@lms.local", groupNames: ["ИБ-23-2", "СА-25-1"], subjectCode: "NET-205", subjectName: "Сетевые технологии", department: "Кафедра кибербезопасности", semester: "Весенний", studyYear: "2026/2027", format: "Смешанный", campus: "Корпус C", courseNumber: 2 },
-  { title: "Эконометрика", teacherEmail: "teacher1@lms.local", groupNames: ["ЭК-24-1", "УП-24-3"], subjectCode: "EC-330", subjectName: "Эконометрика", department: "Кафедра экономики и управления", semester: "Весенний", studyYear: "2026/2027", format: "Очно-заочный", campus: "Главный корпус", courseNumber: 3 },
-  { title: "Управление проектами", teacherEmail: "teacher1@lms.local", groupNames: ["ЭК-24-2", "УП-24-3"], subjectCode: "PM-210", subjectName: "Управление проектами", department: "Кафедра экономики и управления", semester: "Осенний", studyYear: "2027/2028", format: "Очно-заочный", campus: "Главный корпус", courseNumber: 2 },
+const studentSeed = [
+  ["student1@lms.local", "Кузнецова Полина Андреевна", "2026001", "ИС-21-1"],
+  ["student2@lms.local", "Орлов Максим Павлович", "2026002", "ИС-21-1"],
+  ["student3@lms.local", "Соколова Мария Игоревна", "2026003", "ИС-21-2"],
+  ["student4@lms.local", "Федоров Кирилл Дмитриевич", "2026004", "ИС-21-2"],
+  ["student5@lms.local", "Андреев Тимур Сергеевич", "2026005", "ПМИ-22-1"],
+  ["student6@lms.local", "Зайцева Софья Максимовна", "2026006", "ПМИ-22-1"],
+  ["student7@lms.local", "Иванов Даниил Константинович", "2026007", "ИБ-23-1"],
+  ["student8@lms.local", "Попова Виктория Алексеевна", "2026008", "ИБ-23-1"],
 ];
 
-function buildStudentBlueprints() {
-  const result = [];
-  let counter = 1;
-  for (const group of groupBlueprints) {
-    for (let index = 0; index < 4; index += 1) {
-      const fullName = `${lastNames[(counter + index) % lastNames.length]} ${firstNames[counter % firstNames.length]} ${middleNames[counter % middleNames.length]}`;
-      result.push({
-        email: `student${counter}@lms.local`,
-        fullName,
-        studentCode: `2026${String(counter).padStart(3, "0")}`,
-        groupName: group.name,
-      });
-      counter += 1;
-    }
-  }
-  return result;
+const courseSeed = [
+  {
+    title: "Алгоритмы и структуры данных",
+    subjectName: "Алгоритмы",
+    subjectCode: "CS-204",
+    courseNumber: 2,
+    semester: "Осенний",
+    department: "Кафедра информатики",
+    studyYear: "2026/2027",
+    format: "Очный",
+    campus: "Главный корпус",
+    teacherEmail: "teacher1@lms.local",
+    groupNames: ["ИС-21-1", "ИС-21-2"],
+  },
+  {
+    title: "Базы данных",
+    subjectName: "Базы данных",
+    subjectCode: "DB-310",
+    courseNumber: 2,
+    semester: "Осенний",
+    department: "Кафедра информатики",
+    studyYear: "2026/2027",
+    format: "Очный",
+    campus: "Главный корпус",
+    teacherEmail: "teacher1@lms.local",
+    groupNames: ["ИС-21-1", "ПМИ-22-1"],
+  },
+  {
+    title: "Информационная безопасность",
+    subjectName: "Информационная безопасность",
+    subjectCode: "IS-220",
+    courseNumber: 3,
+    semester: "Весенний",
+    department: "Кафедра кибербезопасности",
+    studyYear: "2026/2027",
+    format: "Смешанный",
+    campus: "Корпус C",
+    teacherEmail: "teacher2@lms.local",
+    groupNames: ["ИБ-23-1"],
+  },
+];
+
+function daysFromNow(days) {
+  const date = new Date();
+  date.setDate(date.getDate() + days);
+  return date;
 }
 
-function buildTestQuestions(courseTitle) {
-  return [
-    {
-      type: "SINGLE",
-      text: `Какой шаг для курса "${courseTitle}" нужно выполнить перед публикацией теста?`,
-      points: 2,
-      order: 1,
-      options: {
-        create: [
-          { text: "Проверить вопросы и правильные ответы", isCorrect: true },
-          { text: "Случайно поменять тему оформления", isCorrect: false },
-          { text: "Скрыть описание теста", isCorrect: false },
-        ],
-      },
-    },
-    {
-      type: "MULTI",
-      text: "Что помогает преподавателю контролировать качество теста?",
-      points: 3,
-      order: 2,
-      options: {
-        create: [
-          { text: "История изменений", isCorrect: true },
-          { text: "Аналитика по попыткам", isCorrect: true },
-          { text: "Ручная модерация спорных ответов", isCorrect: true },
-          { text: "Удаление дедлайнов без причины", isCorrect: false },
-        ],
-      },
-    },
-    {
-      type: "ORDER",
-      text: "Расставьте этапы подготовки теста по порядку.",
-      points: 4,
-      order: 3,
-      configJson: JSON.stringify({
-        prompt: "Восстановите типовой порядок подготовки теста.",
-        items: [
-          "Создать карточку теста",
-          "Добавить вопросы и ответы",
-          "Проверить лимиты и публикацию",
-          "Открыть тест студентам",
-        ],
-      }),
-    },
-    {
-      type: "OPEN",
-      text: "Кратко объясните, зачем студенту видеть причины потери баллов.",
-      points: 4,
-      order: 4,
-      configJson: JSON.stringify({
-        prompt: "Укажите, как прозрачная обратная связь помогает улучшить следующую попытку.",
-      }),
-    },
-  ];
+function json(value) {
+  return JSON.stringify(value);
 }
 
-function buildScheduleTemplates(groupsByName, courses, staffByEmail) {
-  const pairSlots = [
-    { pairIndex: 1, startTime: "08:30", endTime: "10:00" },
-    { pairIndex: 2, startTime: "10:10", endTime: "11:40" },
-    { pairIndex: 3, startTime: "12:10", endTime: "13:40" },
-    { pairIndex: 4, startTime: "13:50", endTime: "15:20" },
-    { pairIndex: 5, startTime: "15:30", endTime: "17:00" },
-  ];
-
-  const templates = [];
-  const years = [2026, 2027, 2028];
-  const semesters = ["current", "next"];
-
-  courses.forEach((course, courseIndex) => {
-    const blueprint = courseBlueprints.find((item) => item.title === course.title);
-    const creator = staffByEmail.get(blueprint.teacherEmail);
-    const primaryGroup = groupsByName.get(blueprint.groupNames[0]);
-    const mergedGroups = blueprint.groupNames.slice(1).map((name) => groupsByName.get(name)).filter(Boolean);
-    if (!creator || !primaryGroup) return;
-
-    years.forEach((year) => {
-      semesters.forEach((semester, semesterIndex) => {
-        const weekday = ((courseIndex + semesterIndex) % 5) + 1;
-        const slot = pairSlots[(courseIndex + semesterIndex) % pairSlots.length];
-        templates.push({
-          id: `${year}-${semester}-${course.id}-${primaryGroup.id}`,
-          calendarYear: year,
-          semester,
-          weekday,
-          pairIndex: slot.pairIndex,
-          startTime: slot.startTime,
-          endTime: slot.endTime,
-          title: course.title,
-          type: semester === "current" ? "Лекция" : "Практика",
-          format: blueprint.format,
-          location: `Аудитория ${200 + courseIndex * 3 + semesterIndex}`,
-          parity: semesterIndex % 2 === 0 ? "BOTH" : "ODD",
-          courseId: course.id,
-          courseTitle: course.title,
-          primaryGroupId: primaryGroup.id,
-          primaryGroupName: primaryGroup.name,
-          mergedGroupIds: mergedGroups.map((group) => group.id),
-          mergedGroupNames: mergedGroups.map((group) => group.name),
-          notes: `Демо-шаблон расписания для курса "${course.title}" на ${year} год.`,
-          createdById: creator.id,
-          createdByName: creator.email,
-        });
-      });
-    });
-  });
-
-  return templates;
-}
-
-async function main() {
-  const passwordHash = await bcrypt.hash(password, 10);
-  const studentBlueprints = buildStudentBlueprints();
-
+async function resetTables() {
   await prisma.answerSelection.deleteMany();
   await prisma.answer.deleteMany();
   await prisma.attempt.deleteMany();
+  await prisma.testAttemptAllowance.deleteMany();
   await prisma.option.deleteMany();
   await prisma.question.deleteMany();
   await prisma.test.deleteMany();
   await prisma.submission.deleteMany();
   await prisma.assignment.deleteMany();
+  await prisma.courseGrade.deleteMany();
   await prisma.notification.deleteMany();
   await prisma.enrollment.deleteMany();
   await prisma.course.deleteMany();
   await prisma.user.deleteMany();
   await prisma.studentGroup.deleteMany();
+}
 
-  const groupsByName = new Map();
-  for (const group of groupBlueprints) {
+async function createGroups() {
+  const result = new Map();
+  for (const group of groups) {
     const created = await prisma.studentGroup.create({ data: group });
-    groupsByName.set(created.name, created);
+    result.set(created.name, created);
   }
+  return result;
+}
 
-  const staffByEmail = new Map();
-  for (const staff of staffBlueprints) {
+async function createUsers(groupsByName, passwordHash) {
+  const usersByEmail = new Map();
+
+  for (const person of staff) {
     const created = await prisma.user.create({
       data: {
-        email: staff.email,
+        email: person.email,
         passwordHash,
-        role: staff.role,
-        fullName: staff.fullName,
-        faculty: staff.faculty,
-        staffTitle: staff.staffTitle,
-        staffCategory: staff.staffCategory,
-        accessSystemsJson: JSON.stringify(staff.accessSystems),
-        permissionsJson: JSON.stringify(staff.permissions),
+        role: person.role,
+        fullName: person.fullName,
+        faculty: person.faculty,
+        staffTitle: person.staffTitle,
+        staffCategory: person.staffCategory,
+        accessSystemsJson: json(person.accessSystems),
+        permissionsJson: json(person.permissions),
       },
     });
-    staffByEmail.set(created.email, created);
+    usersByEmail.set(created.email, created);
   }
 
-  const students = [];
-  for (const student of studentBlueprints) {
-    const group = groupsByName.get(student.groupName);
+  for (const [email, fullName, studentCode, groupName] of studentSeed) {
+    const group = groupsByName.get(groupName);
     const created = await prisma.user.create({
       data: {
-        email: student.email,
+        email,
         passwordHash,
         role: "STUDENT",
-        fullName: student.fullName,
-        studentCode: student.studentCode,
+        fullName,
+        studentCode,
         faculty: group.faculty,
         groupId: group.id,
       },
     });
-    students.push(created);
+    usersByEmail.set(created.email, created);
   }
 
+  return usersByEmail;
+}
+
+async function createAssignments(course, teacher) {
+  const assignmentA = await prisma.assignment.create({
+    data: {
+      title: "Практическая работа 1",
+      description: `Закрепить базовые понятия по дисциплине "${course.title}". Загрузите текст решения или краткое описание выполненной работы.`,
+      dueDate: daysFromNow(7),
+      courseId: course.id,
+      teacherId: teacher.id,
+    },
+  });
+
+  const assignmentB = await prisma.assignment.create({
+    data: {
+      title: "Индивидуальное задание",
+      description: "Подготовьте небольшое решение по выбранному варианту и отправьте его на проверку.",
+      dueDate: daysFromNow(14),
+      courseId: course.id,
+      teacherId: teacher.id,
+    },
+  });
+
+  return [assignmentA, assignmentB];
+}
+
+async function createCourseTest(course, teacher) {
+  return prisma.test.create({
+    data: {
+      title: `Входной тест: ${course.subjectName || course.title}`,
+      description: "Короткая проверка базовых знаний перед началом практической части.",
+      instructions: "Ответьте на вопросы. Для закрытых вопросов результат считается автоматически.",
+      isPublished: true,
+      timeLimitMinutes: 25,
+      tabSwitchLimit: 3,
+      attemptLimit: 2,
+      courseId: course.id,
+      teacherId: teacher.id,
+      questions: {
+        create: [
+          {
+            type: "SINGLE",
+            text: `Что является основной единицей работы в курсе "${course.title}"?`,
+            points: 2,
+            order: 1,
+            options: {
+              create: [
+                { text: "Учебный курс с заданиями и тестами", isCorrect: true },
+                { text: "Случайный список файлов", isCorrect: false },
+                { text: "Только расписание занятий", isCorrect: false },
+              ],
+            },
+          },
+          {
+            type: "MULTI",
+            text: "Какие элементы помогают преподавателю оценивать работу студентов?",
+            points: 3,
+            order: 2,
+            options: {
+              create: [
+                { text: "Сдачи заданий", isCorrect: true },
+                { text: "Попытки тестов", isCorrect: true },
+                { text: "Журнал оценок", isCorrect: true },
+                { text: "Цвет фона страницы", isCorrect: false },
+              ],
+            },
+          },
+          {
+            type: "OPEN",
+            text: "Кратко опишите, зачем в системе нужен журнал оценок.",
+            points: 5,
+            order: 3,
+            configJson: json({ minLength: 40, placeholder: "Ответ в свободной форме" }),
+          },
+        ],
+      },
+    },
+  });
+}
+
+async function createCourses(groupsByName, usersByEmail) {
   const courses = [];
-  for (const blueprint of courseBlueprints) {
-    const teacher = staffByEmail.get(blueprint.teacherEmail);
+
+  for (const blueprint of courseSeed) {
+    const teacher = usersByEmail.get(blueprint.teacherEmail);
     const course = await prisma.course.create({
       data: {
         title: blueprint.title,
-        teacherId: teacher.id,
-        subjectCode: blueprint.subjectCode,
         subjectName: blueprint.subjectName,
-        department: blueprint.department,
+        subjectCode: blueprint.subjectCode,
+        courseNumber: blueprint.courseNumber,
         semester: blueprint.semester,
+        department: blueprint.department,
         studyYear: blueprint.studyYear,
         format: blueprint.format,
         campus: blueprint.campus,
-        courseNumber: blueprint.courseNumber,
+        teacherId: teacher.id,
       },
     });
-    courses.push(course);
 
-    const enrolledStudents = students.filter((student) => {
-      const group = [...groupsByName.values()].find((item) => item.id === student.groupId);
+    const students = [...usersByEmail.values()].filter((user) => {
+      if (user.role !== "STUDENT") return false;
+      const group = [...groupsByName.values()].find((item) => item.id === user.groupId);
       return blueprint.groupNames.includes(group?.name);
     });
 
-    if (enrolledStudents.length) {
-      await prisma.enrollment.createMany({
-        data: enrolledStudents.map((student) => ({
+    for (const student of students) {
+      await prisma.enrollment.create({
+        data: { courseId: course.id, studentId: student.id },
+      });
+
+      await prisma.courseGrade.create({
+        data: {
           courseId: course.id,
           studentId: student.id,
-        })),
-      });
-    }
-
-    const assignments = await Promise.all(
-      [
-        ["Практикум 1", 5],
-        ["Домашняя работа 2", 9],
-        ["Мини-проект", 14],
-      ].map(([title, offsetDays], index) =>
-        prisma.assignment.create({
-          data: {
-            courseId: course.id,
-            teacherId: teacher.id,
-            title: `${title}: ${course.title}`,
-            description: `Проверочное задание по курсу "${course.title}".`,
-            dueDate: new Date(Date.now() + (offsetDays + index) * 24 * 60 * 60 * 1000),
-          },
-        })
-      )
-    );
-
-    const tests = await Promise.all(
-      [
-        ["Входной тест", true, 2, 25],
-        ["Контрольный тест", true, 2, 35],
-        ["Итоговый тест", false, 3, 45],
-      ].map(([title, isPublished, attemptLimit, timeLimitMinutes]) =>
-        prisma.test.create({
-          data: {
-            courseId: course.id,
-            teacherId: teacher.id,
-            title: `${title}: ${course.title}`,
-            description: `Проверочный тест по курсу "${course.title}".`,
-            instructions: "Вопросы собраны так, чтобы проверить публикацию, пересдачи, аналитику и осмотр теста.",
-            isPublished,
-            attemptLimit,
-            timeLimitMinutes,
-            tabSwitchLimit: 3,
-            questions: {
-              create: buildTestQuestions(course.title),
-            },
-          },
-        })
-      )
-    );
-
-    for (const [studentIndex, student] of enrolledStudents.entries()) {
-      const assignment = assignments[studentIndex % assignments.length];
-      await prisma.submission.create({
-        data: {
-          assignmentId: assignment.id,
-          studentId: student.id,
-          contentText: `Решение студента ${student.email}`,
-          grade: [96, 92, 88, 84, 79, 73, 67, 61][studentIndex % 8],
-          feedback: studentIndex % 4 === 0 ? "Хорошая работа, но можно усилить аргументацию." : "Работа принята, логика решения понятна.",
-          gradedAt: new Date(),
-          createdAt: new Date(Date.now() - (studentIndex + 1) * 24 * 60 * 60 * 1000),
-        },
-      });
-
-      const test = tests[studentIndex % tests.length];
-      await prisma.attempt.create({
-        data: {
-          testId: test.id,
-          studentId: student.id,
-          score: [19, 17, 15, 13, 11, 9][studentIndex % 6],
-          maxScore: 20,
-          startedAt: new Date(Date.now() - (studentIndex + 2) * 24 * 60 * 60 * 1000 - 30 * 60 * 1000),
-          finishedAt: new Date(Date.now() - (studentIndex + 2) * 24 * 60 * 60 * 1000),
-          tabSwitchCount: studentIndex % 3,
-          activityLogJson: JSON.stringify([{ type: "TAB_SWITCH", createdAt: new Date().toISOString() }]),
+          module1Score: 70 + (student.id % 25),
+          module2Score: 65 + (student.id % 30),
+          module3Score: null,
+          notes: "Демо-запись для проверки журнала.",
         },
       });
     }
+
+    const assignments = await createAssignments(course, teacher);
+    const test = await createCourseTest(course, teacher);
+
+    for (const [index, student] of students.entries()) {
+      if (index < assignments.length) {
+        await prisma.submission.create({
+          data: {
+            assignmentId: assignments[index].id,
+            studentId: student.id,
+            contentText: `Демо-решение студента ${student.fullName}.`,
+            grade: 82 + index * 7,
+            feedback: "Работа принята. Основная логика решения показана корректно.",
+            gradedAt: new Date(),
+            attachmentsJson: "[]",
+          },
+        });
+      }
+
+      if (index < 3) {
+        await prisma.attempt.create({
+          data: {
+            testId: test.id,
+            studentId: student.id,
+            score: 7 + index,
+            maxScore: 10,
+            startedAt: daysFromNow(-index - 2),
+            finishedAt: daysFromNow(-index - 2),
+            tabSwitchCount: index,
+            activityLogJson: json([{ type: "demo", at: new Date().toISOString() }]),
+          },
+        });
+      }
+    }
+
+    await prisma.notification.create({
+      data: {
+        title: "Курс опубликован",
+        body: `Для курса "${course.title}" доступны задания и входной тест.`,
+        audience: "COURSE",
+        courseId: course.id,
+        createdById: teacher.id,
+      },
+    });
+
+    courses.push(course);
   }
 
-  const templates = buildScheduleTemplates(groupsByName, courses, staffByEmail);
+  return courses;
+}
+
+function writeScheduleTemplates(courses, groupsByName, usersByEmail) {
+  const teacher = usersByEmail.get("teacher1@lms.local");
+  const course = courses[0];
+  const firstGroup = groupsByName.get("ИС-21-1");
+  const secondGroup = groupsByName.get("ИС-21-2");
+
+  const templates = [
+    {
+      id: "demo-monday-1",
+      calendarYear: 2026,
+      semester: "current",
+      weekday: 1,
+      pairIndex: 2,
+      startTime: "10:10",
+      endTime: "11:40",
+      title: "Алгоритмы и структуры данных",
+      type: "Лекция",
+      format: "Очно",
+      location: "2-214",
+      parity: "BOTH",
+      courseId: course.id,
+      courseTitle: course.title,
+      primaryGroupId: firstGroup.id,
+      primaryGroupName: firstGroup.name,
+      mergedGroupIds: [secondGroup.id],
+      mergedGroupNames: [secondGroup.name],
+      notes: "Демо-занятие для расписания.",
+      createdById: teacher.id,
+      createdByName: teacher.fullName,
+    },
+    {
+      id: "demo-wednesday-3",
+      calendarYear: 2026,
+      semester: "current",
+      weekday: 3,
+      pairIndex: 3,
+      startTime: "12:10",
+      endTime: "13:40",
+      title: "Практикум по алгоритмам",
+      type: "Практика",
+      format: "Очно",
+      location: "3-108",
+      parity: "ODD",
+      courseId: course.id,
+      courseTitle: course.title,
+      primaryGroupId: firstGroup.id,
+      primaryGroupName: firstGroup.name,
+      mergedGroupIds: [],
+      mergedGroupNames: [],
+      notes: "Нечетная неделя.",
+      createdById: teacher.id,
+      createdByName: teacher.fullName,
+    },
+  ];
+
   fs.mkdirSync(path.dirname(templatesFile), { recursive: true });
   fs.writeFileSync(templatesFile, JSON.stringify(templates, null, 2), "utf8");
+}
 
-  console.log(`Готово: ${staffBlueprints.length} сотрудников, ${students.length} студентов, ${groupsByName.size} групп, ${courses.length} курсов, ${templates.length} шаблонов расписания.`);
-  console.log("Логины по умолчанию: admin@lms.local / teacher1@lms.local / student1@lms.local, пароль: 123456");
+async function main() {
+  const passwordHash = await bcrypt.hash(password, 10);
+
+  await resetTables();
+  const groupsByName = await createGroups();
+  const usersByEmail = await createUsers(groupsByName, passwordHash);
+  const courses = await createCourses(groupsByName, usersByEmail);
+  writeScheduleTemplates(courses, groupsByName, usersByEmail);
+
+  console.log("Демо-данные успешно загружены.");
+  console.log("Логины: admin@lms.local, teacher1@lms.local, student1@lms.local");
+  console.log(`Пароль для всех демо-пользователей: ${password}`);
 }
 
 main()
-  .then(async () => {
-    await prisma.$disconnect();
-  })
-  .catch(async (error) => {
+  .catch((error) => {
     console.error(error);
+    process.exitCode = 1;
+  })
+  .finally(async () => {
     await prisma.$disconnect();
-    process.exit(1);
   });
