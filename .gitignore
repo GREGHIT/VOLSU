@@ -1,0 +1,29 @@
+# Local environment
+.env
+.env.local
+*.local
+
+# Dependencies and builds
+node_modules/
+dist/
+dist-ssr/
+diploma_build/
+diploma_assets/
+
+# Runtime data
+backend/prisma/*.db
+backend/prisma/*.db-journal
+backend/uploads/
+backend/data/audit-log.json
+
+# IDE and OS files
+.vs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated local documents and screenshots
+*.docx
+*.pptx
+Снимок экрана *.png

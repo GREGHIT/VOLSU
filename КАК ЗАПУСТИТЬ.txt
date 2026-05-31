@@ -1,0 +1,7 @@
+cd C:\Users\Grigory\Desktop\LMS\backend
+node index.js
+
+Server started on http://localhost:3000
+
+cd C:\Users\Grigory\Desktop\LMS\frontend\lms-frontend
+npm run dev

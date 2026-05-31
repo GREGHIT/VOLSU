@@ -1,0 +1,320 @@
+Я пишу дипломную работу. Тема: «Рабочая модель сайта 2». Контекст проекта: Я реализую LMS (Learning Management System). === BACKEND === Стек: - Node.js - Express - Prisma - SQLite - JWT (аутентификация) - Роли: STUDENT / TEACHER / ADMIN Backend полностью реализован и работает. Реализовано на backend: - Аутентификация и авторизация (JWT) - Курсы (Course) - Запись студентов на курсы (Enrollment) - Домашние задания (Assignment) - Сдачи заданий (Submission) + оценки - Тесты: - создание теста - вопросы (SINGLE / MULTI / OPEN) - публикация / снятие с публикации - попытки (Attempt) - автооценка - Gradebook: - единый журнал по курсу - задания + тесты - средние баллы - Ограничения по ролям: - Gradebook доступен только TEACHER / ADMIN - STUDENT получает 403 на gradebook/full Backend путь: C:\Users\Grigory\Desktop\LMS\backend Backend запуск: node index.js Backend URL: http://localhost:3000 Рабочие тестовые пользователи: - TEACHER: email: teacher@lms.local password: 123456 - STUDENT: email: student1@lms.local password: 123456 === FRONTEND === Стек: - React - Vite - React Router - Axios - jwt-decode Frontend путь: C:\Users\Grigory\Desktop\LMS\frontend\lms-frontend Frontend запуск: npm run dev URL: http://localhost:5174 Структура frontend: src/ api/ http.js auth/ token.js components/ Modal.jsx RequireAuth.jsx pages/ LoginPage.jsx CoursesPage.jsx CoursePage.jsx CourseAssignments.jsx CourseTests.jsx CourseGradebook.jsx TestAttemptPage.jsx main.jsx index.css === ЧТО УЖЕ РЕАЛИЗОВАНО НА FRONTEND === - Login (JWT) - Хранение token + user (role, email) в localStorage - Разделение UI по ролям: - TEACHER: - создание курсов - создание заданий - создание тестов - publish / unpublish тестов - доступ к Gradebook - STUDENT: - видит только свои курсы - проходит опубликованные тесты - НЕ видит Gradebook - Страница курса с вкладками: - Assignments - Tests - Gradebook (только для teacher) - Прохождение теста студентом: - старт попытки - ответы - завершение - результат === ТЕКУЩЕЕ СОСТОЯНИЕ === - Проект запускается - Backend и frontend связаны - Ошибок нет - Gradebook скрыт у студента намеренно - Диалог был прерван из-за лагов, нужно продолжать дальше === 
+
+Я разрабатываю дипломный проект: «Рабочая модель сайта 2».
+
+Это учебная LMS (Learning Management System) с разделением ролей и полным backend + частично реализованным frontend.
+
+====================================
+1. ОБЩАЯ АРХИТЕКТУРА
+====================================
+
+Проект состоит из:
+- Backend (Node.js)
+- Frontend (React)
+
+Работают отдельно, соединяются через HTTP API.
+
+Frontend:
+http://localhost:5174
+
+Backend:
+http://localhost:3000
+
+====================================
+2. BACKEND
+====================================
+
+Стек:
+- Node.js
+- Express
+- Prisma ORM
+- SQLite
+- JWT (аутентификация)
+
+Путь:
+C:\Users\Grigory\Desktop\LMS\backend
+
+Запуск:
+node index.js
+
+====================================
+2.1 АУТЕНТИФИКАЦИЯ
+====================================
+
+JWT токен содержит:
+- sub (user id)
+- email
+- role (STUDENT / TEACHER / ADMIN)
+
+Endpoint:
+POST /auth/login
+
+Ответ:
+{
+  ok: true,
+  token: "JWT"
+}
+
+ВАЖНО:
+Backend НЕ возвращает user объект, только token.
+
+====================================
+2.2 РОЛИ
+====================================
+
+- STUDENT
+- TEACHER
+- ADMIN
+
+Ограничения:
+- STUDENT не может:
+  - создавать курсы
+  - создавать задания
+  - создавать тесты
+  - видеть gradebook
+- TEACHER / ADMIN имеют полный доступ
+
+====================================
+2.3 ФУНКЦИОНАЛ BACKEND
+====================================
+
+Реализовано полностью:
+
+Курсы:
+- создание
+- список
+- запись студентов
+
+Assignments:
+- создание
+- список
+- dueDate
+- сдачи (Submission)
+- оценки
+
+Tests:
+- создание
+- публикация / снятие
+- вопросы (SINGLE / MULTI / OPEN)
+- попытки (Attempt)
+- автооценка
+
+Gradebook:
+- GET /courses/:id/gradebook/full
+- включает:
+  - задания
+  - тесты (лучшая попытка)
+  - средние значения
+
+ВАЖНО:
+Gradebook доступен ТОЛЬКО TEACHER / ADMIN
+STUDENT получает 403
+
+====================================
+3. FRONTEND
+====================================
+
+Стек:
+- React (18.2.0)
+- Vite
+- React Router DOM v6
+- Axios
+- jwt-decode
+
+Путь:
+C:\Users\Grigory\Desktop\LMS\frontend\lms-frontend
+
+Запуск:
+npm run dev
+
+====================================
+3.1 СТРУКТУРА
+====================================
+
+src/
+  api/
+    http.js (axios instance, baseURL = http://localhost:3000)
+  auth/
+    token.js (работа с localStorage)
+  components/
+    Modal.jsx
+    RequireAuth.jsx
+  pages/
+    LoginPage.jsx
+    CoursesPage.jsx
+    CoursePage.jsx
+    CourseAssignments.jsx
+    CourseTests.jsx
+    CourseGradebook.jsx
+    TestAttemptPage.jsx
+  main.jsx
+  index.css
+
+====================================
+3.2 ХРАНЕНИЕ АВТОРИЗАЦИИ
+====================================
+
+localStorage:
+- lms_token
+- lms_user
+
+user формируется на frontend через декод JWT:
+
+jwtDecode(token) → {
+  sub,
+  email,
+  role
+}
+
+Сохраняется:
+{
+  id: sub,
+  email,
+  role
+}
+
+====================================
+3.3 ROUTING (main.jsx)
+====================================
+
+/login
+/courses
+/courses/:courseId
+  /assignments
+  /tests
+  /gradebook (только teacher)
+/tests/:testId/attempts/:attemptId
+
+Используется:
+- BrowserRouter
+- Nested routes
+- RequireAuth
+
+====================================
+4. UI ЛОГИКА ПО РОЛЯМ
+====================================
+
+TEACHER:
+- видит:
+  - + Создать курс
+  - + Создать задание
+  - + Создать тест
+  - Publish / Unpublish
+  - Gradebook
+
+STUDENT:
+- видит:
+  - свои курсы (Enrollment)
+  - Assignments (только просмотр)
+  - Tests:
+    - кнопка "Начать"
+- НЕ видит:
+  - создание
+  - publish
+  - gradebook
+
+====================================
+5. TEST FLOW (РЕАЛИЗОВАНО)
+====================================
+
+Student:
+1) открывает Tests
+2) нажимает "Начать"
+3) создаётся Attempt
+4) открывается TestAttemptPage
+5) отвечает:
+   - SINGLE
+   - MULTI
+   - OPEN
+6) submit
+7) получает результат
+
+====================================
+6. GRADEBOOK
+====================================
+
+- TEACHER:
+  - видит таблицу студентов
+  - средние баллы
+- STUDENT:
+  - вкладка скрыта на frontend
+  - backend отдаёт 403
+
+Доп защита:
+CourseGradebook.jsx:
+if (!isTeacher) return "Доступ запрещен"
+
+====================================
+7. ВАЖНЫЕ ПРОБЛЕМЫ, КОТОРЫЕ УЖЕ РЕШЕНЫ
+====================================
+
+1. Invalid hook call
+→ причина: 2 node_modules
+→ решение: удалить лишний
+
+2. node не найден
+→ отсутствовал node.exe
+→ переустановка Node.js
+
+3. Network Error
+→ backend не был запущен
+
+4. 401
+→ не передан токен
+
+5. 403
+→ роли работают правильно
+→ UI скрыт для STUDENT
+
+6. 404
+→ неправильные endpoint'ы
+
+7. ????? вместо текста
+→ проблема кодировки PowerShell
+
+====================================
+8. ТЕКУЩЕЕ СОСТОЯНИЕ
+====================================
+
+- Backend полностью готов
+- Frontend рабочий
+- Авторизация работает
+- Роли работают
+- Тесты можно проходить
+- Gradebook работает для teacher
+- UI разделён по ролям
+- Ошибок нет
+
+====================================
+9. ЧТО НУЖНО ДАЛЬШЕ
+====================================
+
+Продолжать разработку frontend пошагово.
+
+Возможные следующие задачи:
+
+ВАРИАНТЫ:
+1) Student:
+   - "Мои оценки" (личный gradebook)
+2) Student:
+   - сдача Assignment (Submission UI)
+3) Teacher:
+   - UI для создания вопросов теста
+4) Teacher:
+   - просмотр попыток студентов
+5) UI улучшения
+
+====================================
+10. ТРЕБОВАНИЯ К ОТВЕТУ
+====================================
+
+- Давать пошагово
+- Давать готовый код
+- Объяснять, куда вставлять
+- Не перескакивать шаги
+- Учитывать текущую архитектуру
+- НЕ ломать существующий код
+
+====================================
+
+Начни с анализа текущего состояния и предложи следующий шаг разработки.

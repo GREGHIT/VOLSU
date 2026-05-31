@@ -1,0 +1,1622 @@
+[
+  {
+    "id": "2026-current-33-26",
+    "calendarYear": 2026,
+    "semester": "current",
+    "weekday": 1,
+    "pairIndex": 1,
+    "startTime": "08:30",
+    "endTime": "10:00",
+    "title": "Алгоритмы и структуры данных",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 200",
+    "parity": "BOTH",
+    "courseId": 33,
+    "courseTitle": "Алгоритмы и структуры данных",
+    "primaryGroupId": 26,
+    "primaryGroupName": "ИС-21-1",
+    "mergedGroupIds": [
+      27
+    ],
+    "mergedGroupNames": [
+      "ИС-21-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Алгоритмы и структуры данных\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-next-33-26",
+    "calendarYear": 2026,
+    "semester": "next",
+    "weekday": 2,
+    "pairIndex": 2,
+    "startTime": "10:10",
+    "endTime": "11:40",
+    "title": "Алгоритмы и структуры данных",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 201",
+    "parity": "ODD",
+    "courseId": 33,
+    "courseTitle": "Алгоритмы и структуры данных",
+    "primaryGroupId": 26,
+    "primaryGroupName": "ИС-21-1",
+    "mergedGroupIds": [
+      27
+    ],
+    "mergedGroupNames": [
+      "ИС-21-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Алгоритмы и структуры данных\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-current-33-26",
+    "calendarYear": 2027,
+    "semester": "current",
+    "weekday": 1,
+    "pairIndex": 1,
+    "startTime": "08:30",
+    "endTime": "10:00",
+    "title": "Алгоритмы и структуры данных",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 200",
+    "parity": "BOTH",
+    "courseId": 33,
+    "courseTitle": "Алгоритмы и структуры данных",
+    "primaryGroupId": 26,
+    "primaryGroupName": "ИС-21-1",
+    "mergedGroupIds": [
+      27
+    ],
+    "mergedGroupNames": [
+      "ИС-21-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Алгоритмы и структуры данных\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-next-33-26",
+    "calendarYear": 2027,
+    "semester": "next",
+    "weekday": 2,
+    "pairIndex": 2,
+    "startTime": "10:10",
+    "endTime": "11:40",
+    "title": "Алгоритмы и структуры данных",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 201",
+    "parity": "ODD",
+    "courseId": 33,
+    "courseTitle": "Алгоритмы и структуры данных",
+    "primaryGroupId": 26,
+    "primaryGroupName": "ИС-21-1",
+    "mergedGroupIds": [
+      27
+    ],
+    "mergedGroupNames": [
+      "ИС-21-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Алгоритмы и структуры данных\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-current-33-26",
+    "calendarYear": 2028,
+    "semester": "current",
+    "weekday": 1,
+    "pairIndex": 1,
+    "startTime": "08:30",
+    "endTime": "10:00",
+    "title": "Алгоритмы и структуры данных",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 200",
+    "parity": "BOTH",
+    "courseId": 33,
+    "courseTitle": "Алгоритмы и структуры данных",
+    "primaryGroupId": 26,
+    "primaryGroupName": "ИС-21-1",
+    "mergedGroupIds": [
+      27
+    ],
+    "mergedGroupNames": [
+      "ИС-21-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Алгоритмы и структуры данных\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-next-33-26",
+    "calendarYear": 2028,
+    "semester": "next",
+    "weekday": 2,
+    "pairIndex": 2,
+    "startTime": "10:10",
+    "endTime": "11:40",
+    "title": "Алгоритмы и структуры данных",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 201",
+    "parity": "ODD",
+    "courseId": 33,
+    "courseTitle": "Алгоритмы и структуры данных",
+    "primaryGroupId": 26,
+    "primaryGroupName": "ИС-21-1",
+    "mergedGroupIds": [
+      27
+    ],
+    "mergedGroupNames": [
+      "ИС-21-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Алгоритмы и структуры данных\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-current-34-26",
+    "calendarYear": 2026,
+    "semester": "current",
+    "weekday": 2,
+    "pairIndex": 2,
+    "startTime": "10:10",
+    "endTime": "11:40",
+    "title": "Базы данных",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 203",
+    "parity": "BOTH",
+    "courseId": 34,
+    "courseTitle": "Базы данных",
+    "primaryGroupId": 26,
+    "primaryGroupName": "ИС-21-1",
+    "mergedGroupIds": [
+      34
+    ],
+    "mergedGroupNames": [
+      "МО-24-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Базы данных\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-next-34-26",
+    "calendarYear": 2026,
+    "semester": "next",
+    "weekday": 3,
+    "pairIndex": 3,
+    "startTime": "12:10",
+    "endTime": "13:40",
+    "title": "Базы данных",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 204",
+    "parity": "ODD",
+    "courseId": 34,
+    "courseTitle": "Базы данных",
+    "primaryGroupId": 26,
+    "primaryGroupName": "ИС-21-1",
+    "mergedGroupIds": [
+      34
+    ],
+    "mergedGroupNames": [
+      "МО-24-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Базы данных\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-current-34-26",
+    "calendarYear": 2027,
+    "semester": "current",
+    "weekday": 2,
+    "pairIndex": 2,
+    "startTime": "10:10",
+    "endTime": "11:40",
+    "title": "Базы данных",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 203",
+    "parity": "BOTH",
+    "courseId": 34,
+    "courseTitle": "Базы данных",
+    "primaryGroupId": 26,
+    "primaryGroupName": "ИС-21-1",
+    "mergedGroupIds": [
+      34
+    ],
+    "mergedGroupNames": [
+      "МО-24-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Базы данных\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-next-34-26",
+    "calendarYear": 2027,
+    "semester": "next",
+    "weekday": 3,
+    "pairIndex": 3,
+    "startTime": "12:10",
+    "endTime": "13:40",
+    "title": "Базы данных",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 204",
+    "parity": "ODD",
+    "courseId": 34,
+    "courseTitle": "Базы данных",
+    "primaryGroupId": 26,
+    "primaryGroupName": "ИС-21-1",
+    "mergedGroupIds": [
+      34
+    ],
+    "mergedGroupNames": [
+      "МО-24-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Базы данных\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-current-34-26",
+    "calendarYear": 2028,
+    "semester": "current",
+    "weekday": 2,
+    "pairIndex": 2,
+    "startTime": "10:10",
+    "endTime": "11:40",
+    "title": "Базы данных",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 203",
+    "parity": "BOTH",
+    "courseId": 34,
+    "courseTitle": "Базы данных",
+    "primaryGroupId": 26,
+    "primaryGroupName": "ИС-21-1",
+    "mergedGroupIds": [
+      34
+    ],
+    "mergedGroupNames": [
+      "МО-24-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Базы данных\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-next-34-26",
+    "calendarYear": 2028,
+    "semester": "next",
+    "weekday": 3,
+    "pairIndex": 3,
+    "startTime": "12:10",
+    "endTime": "13:40",
+    "title": "Базы данных",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 204",
+    "parity": "ODD",
+    "courseId": 34,
+    "courseTitle": "Базы данных",
+    "primaryGroupId": 26,
+    "primaryGroupName": "ИС-21-1",
+    "mergedGroupIds": [
+      34
+    ],
+    "mergedGroupNames": [
+      "МО-24-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Базы данных\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-current-35-27",
+    "calendarYear": 2026,
+    "semester": "current",
+    "weekday": 3,
+    "pairIndex": 3,
+    "startTime": "12:10",
+    "endTime": "13:40",
+    "title": "Разработка веб-приложений",
+    "type": "Лекция",
+    "format": "Смешанный",
+    "location": "Аудитория 206",
+    "parity": "BOTH",
+    "courseId": 35,
+    "courseTitle": "Разработка веб-приложений",
+    "primaryGroupId": 27,
+    "primaryGroupName": "ИС-21-2",
+    "mergedGroupIds": [
+      28
+    ],
+    "mergedGroupNames": [
+      "ПМИ-22-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Разработка веб-приложений\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-next-35-27",
+    "calendarYear": 2026,
+    "semester": "next",
+    "weekday": 4,
+    "pairIndex": 4,
+    "startTime": "13:50",
+    "endTime": "15:20",
+    "title": "Разработка веб-приложений",
+    "type": "Практика",
+    "format": "Смешанный",
+    "location": "Аудитория 207",
+    "parity": "ODD",
+    "courseId": 35,
+    "courseTitle": "Разработка веб-приложений",
+    "primaryGroupId": 27,
+    "primaryGroupName": "ИС-21-2",
+    "mergedGroupIds": [
+      28
+    ],
+    "mergedGroupNames": [
+      "ПМИ-22-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Разработка веб-приложений\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-current-35-27",
+    "calendarYear": 2027,
+    "semester": "current",
+    "weekday": 3,
+    "pairIndex": 3,
+    "startTime": "12:10",
+    "endTime": "13:40",
+    "title": "Разработка веб-приложений",
+    "type": "Лекция",
+    "format": "Смешанный",
+    "location": "Аудитория 206",
+    "parity": "BOTH",
+    "courseId": 35,
+    "courseTitle": "Разработка веб-приложений",
+    "primaryGroupId": 27,
+    "primaryGroupName": "ИС-21-2",
+    "mergedGroupIds": [
+      28
+    ],
+    "mergedGroupNames": [
+      "ПМИ-22-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Разработка веб-приложений\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-next-35-27",
+    "calendarYear": 2027,
+    "semester": "next",
+    "weekday": 4,
+    "pairIndex": 4,
+    "startTime": "13:50",
+    "endTime": "15:20",
+    "title": "Разработка веб-приложений",
+    "type": "Практика",
+    "format": "Смешанный",
+    "location": "Аудитория 207",
+    "parity": "ODD",
+    "courseId": 35,
+    "courseTitle": "Разработка веб-приложений",
+    "primaryGroupId": 27,
+    "primaryGroupName": "ИС-21-2",
+    "mergedGroupIds": [
+      28
+    ],
+    "mergedGroupNames": [
+      "ПМИ-22-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Разработка веб-приложений\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-current-35-27",
+    "calendarYear": 2028,
+    "semester": "current",
+    "weekday": 3,
+    "pairIndex": 3,
+    "startTime": "12:10",
+    "endTime": "13:40",
+    "title": "Разработка веб-приложений",
+    "type": "Лекция",
+    "format": "Смешанный",
+    "location": "Аудитория 206",
+    "parity": "BOTH",
+    "courseId": 35,
+    "courseTitle": "Разработка веб-приложений",
+    "primaryGroupId": 27,
+    "primaryGroupName": "ИС-21-2",
+    "mergedGroupIds": [
+      28
+    ],
+    "mergedGroupNames": [
+      "ПМИ-22-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Разработка веб-приложений\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-next-35-27",
+    "calendarYear": 2028,
+    "semester": "next",
+    "weekday": 4,
+    "pairIndex": 4,
+    "startTime": "13:50",
+    "endTime": "15:20",
+    "title": "Разработка веб-приложений",
+    "type": "Практика",
+    "format": "Смешанный",
+    "location": "Аудитория 207",
+    "parity": "ODD",
+    "courseId": 35,
+    "courseTitle": "Разработка веб-приложений",
+    "primaryGroupId": 27,
+    "primaryGroupName": "ИС-21-2",
+    "mergedGroupIds": [
+      28
+    ],
+    "mergedGroupNames": [
+      "ПМИ-22-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Разработка веб-приложений\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-current-36-28",
+    "calendarYear": 2026,
+    "semester": "current",
+    "weekday": 4,
+    "pairIndex": 4,
+    "startTime": "13:50",
+    "endTime": "15:20",
+    "title": "Дискретная математика",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 209",
+    "parity": "BOTH",
+    "courseId": 36,
+    "courseTitle": "Дискретная математика",
+    "primaryGroupId": 28,
+    "primaryGroupName": "ПМИ-22-1",
+    "mergedGroupIds": [
+      35
+    ],
+    "mergedGroupNames": [
+      "МО-24-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Дискретная математика\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-next-36-28",
+    "calendarYear": 2026,
+    "semester": "next",
+    "weekday": 5,
+    "pairIndex": 5,
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "title": "Дискретная математика",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 210",
+    "parity": "ODD",
+    "courseId": 36,
+    "courseTitle": "Дискретная математика",
+    "primaryGroupId": 28,
+    "primaryGroupName": "ПМИ-22-1",
+    "mergedGroupIds": [
+      35
+    ],
+    "mergedGroupNames": [
+      "МО-24-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Дискретная математика\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-current-36-28",
+    "calendarYear": 2027,
+    "semester": "current",
+    "weekday": 4,
+    "pairIndex": 4,
+    "startTime": "13:50",
+    "endTime": "15:20",
+    "title": "Дискретная математика",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 209",
+    "parity": "BOTH",
+    "courseId": 36,
+    "courseTitle": "Дискретная математика",
+    "primaryGroupId": 28,
+    "primaryGroupName": "ПМИ-22-1",
+    "mergedGroupIds": [
+      35
+    ],
+    "mergedGroupNames": [
+      "МО-24-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Дискретная математика\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-next-36-28",
+    "calendarYear": 2027,
+    "semester": "next",
+    "weekday": 5,
+    "pairIndex": 5,
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "title": "Дискретная математика",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 210",
+    "parity": "ODD",
+    "courseId": 36,
+    "courseTitle": "Дискретная математика",
+    "primaryGroupId": 28,
+    "primaryGroupName": "ПМИ-22-1",
+    "mergedGroupIds": [
+      35
+    ],
+    "mergedGroupNames": [
+      "МО-24-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Дискретная математика\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-current-36-28",
+    "calendarYear": 2028,
+    "semester": "current",
+    "weekday": 4,
+    "pairIndex": 4,
+    "startTime": "13:50",
+    "endTime": "15:20",
+    "title": "Дискретная математика",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 209",
+    "parity": "BOTH",
+    "courseId": 36,
+    "courseTitle": "Дискретная математика",
+    "primaryGroupId": 28,
+    "primaryGroupName": "ПМИ-22-1",
+    "mergedGroupIds": [
+      35
+    ],
+    "mergedGroupNames": [
+      "МО-24-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Дискретная математика\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-next-36-28",
+    "calendarYear": 2028,
+    "semester": "next",
+    "weekday": 5,
+    "pairIndex": 5,
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "title": "Дискретная математика",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 210",
+    "parity": "ODD",
+    "courseId": 36,
+    "courseTitle": "Дискретная математика",
+    "primaryGroupId": 28,
+    "primaryGroupName": "ПМИ-22-1",
+    "mergedGroupIds": [
+      35
+    ],
+    "mergedGroupNames": [
+      "МО-24-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Дискретная математика\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-current-37-29",
+    "calendarYear": 2026,
+    "semester": "current",
+    "weekday": 5,
+    "pairIndex": 5,
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "title": "Математический анализ",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 212",
+    "parity": "BOTH",
+    "courseId": 37,
+    "courseTitle": "Математический анализ",
+    "primaryGroupId": 29,
+    "primaryGroupName": "ПМИ-22-2",
+    "mergedGroupIds": [
+      34
+    ],
+    "mergedGroupNames": [
+      "МО-24-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Математический анализ\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-next-37-29",
+    "calendarYear": 2026,
+    "semester": "next",
+    "weekday": 1,
+    "pairIndex": 1,
+    "startTime": "08:30",
+    "endTime": "10:00",
+    "title": "Математический анализ",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 213",
+    "parity": "ODD",
+    "courseId": 37,
+    "courseTitle": "Математический анализ",
+    "primaryGroupId": 29,
+    "primaryGroupName": "ПМИ-22-2",
+    "mergedGroupIds": [
+      34
+    ],
+    "mergedGroupNames": [
+      "МО-24-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Математический анализ\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-current-37-29",
+    "calendarYear": 2027,
+    "semester": "current",
+    "weekday": 5,
+    "pairIndex": 5,
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "title": "Математический анализ",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 212",
+    "parity": "BOTH",
+    "courseId": 37,
+    "courseTitle": "Математический анализ",
+    "primaryGroupId": 29,
+    "primaryGroupName": "ПМИ-22-2",
+    "mergedGroupIds": [
+      34
+    ],
+    "mergedGroupNames": [
+      "МО-24-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Математический анализ\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-next-37-29",
+    "calendarYear": 2027,
+    "semester": "next",
+    "weekday": 1,
+    "pairIndex": 1,
+    "startTime": "08:30",
+    "endTime": "10:00",
+    "title": "Математический анализ",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 213",
+    "parity": "ODD",
+    "courseId": 37,
+    "courseTitle": "Математический анализ",
+    "primaryGroupId": 29,
+    "primaryGroupName": "ПМИ-22-2",
+    "mergedGroupIds": [
+      34
+    ],
+    "mergedGroupNames": [
+      "МО-24-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Математический анализ\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-current-37-29",
+    "calendarYear": 2028,
+    "semester": "current",
+    "weekday": 5,
+    "pairIndex": 5,
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "title": "Математический анализ",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 212",
+    "parity": "BOTH",
+    "courseId": 37,
+    "courseTitle": "Математический анализ",
+    "primaryGroupId": 29,
+    "primaryGroupName": "ПМИ-22-2",
+    "mergedGroupIds": [
+      34
+    ],
+    "mergedGroupNames": [
+      "МО-24-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Математический анализ\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-next-37-29",
+    "calendarYear": 2028,
+    "semester": "next",
+    "weekday": 1,
+    "pairIndex": 1,
+    "startTime": "08:30",
+    "endTime": "10:00",
+    "title": "Математический анализ",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 213",
+    "parity": "ODD",
+    "courseId": 37,
+    "courseTitle": "Математический анализ",
+    "primaryGroupId": 29,
+    "primaryGroupName": "ПМИ-22-2",
+    "mergedGroupIds": [
+      34
+    ],
+    "mergedGroupNames": [
+      "МО-24-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Математический анализ\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-current-38-29",
+    "calendarYear": 2026,
+    "semester": "current",
+    "weekday": 1,
+    "pairIndex": 1,
+    "startTime": "08:30",
+    "endTime": "10:00",
+    "title": "Теория вероятностей",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 215",
+    "parity": "BOTH",
+    "courseId": 38,
+    "courseTitle": "Теория вероятностей",
+    "primaryGroupId": 29,
+    "primaryGroupName": "ПМИ-22-2",
+    "mergedGroupIds": [
+      35
+    ],
+    "mergedGroupNames": [
+      "МО-24-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Теория вероятностей\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-next-38-29",
+    "calendarYear": 2026,
+    "semester": "next",
+    "weekday": 2,
+    "pairIndex": 2,
+    "startTime": "10:10",
+    "endTime": "11:40",
+    "title": "Теория вероятностей",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 216",
+    "parity": "ODD",
+    "courseId": 38,
+    "courseTitle": "Теория вероятностей",
+    "primaryGroupId": 29,
+    "primaryGroupName": "ПМИ-22-2",
+    "mergedGroupIds": [
+      35
+    ],
+    "mergedGroupNames": [
+      "МО-24-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Теория вероятностей\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-current-38-29",
+    "calendarYear": 2027,
+    "semester": "current",
+    "weekday": 1,
+    "pairIndex": 1,
+    "startTime": "08:30",
+    "endTime": "10:00",
+    "title": "Теория вероятностей",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 215",
+    "parity": "BOTH",
+    "courseId": 38,
+    "courseTitle": "Теория вероятностей",
+    "primaryGroupId": 29,
+    "primaryGroupName": "ПМИ-22-2",
+    "mergedGroupIds": [
+      35
+    ],
+    "mergedGroupNames": [
+      "МО-24-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Теория вероятностей\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-next-38-29",
+    "calendarYear": 2027,
+    "semester": "next",
+    "weekday": 2,
+    "pairIndex": 2,
+    "startTime": "10:10",
+    "endTime": "11:40",
+    "title": "Теория вероятностей",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 216",
+    "parity": "ODD",
+    "courseId": 38,
+    "courseTitle": "Теория вероятностей",
+    "primaryGroupId": 29,
+    "primaryGroupName": "ПМИ-22-2",
+    "mergedGroupIds": [
+      35
+    ],
+    "mergedGroupNames": [
+      "МО-24-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Теория вероятностей\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-current-38-29",
+    "calendarYear": 2028,
+    "semester": "current",
+    "weekday": 1,
+    "pairIndex": 1,
+    "startTime": "08:30",
+    "endTime": "10:00",
+    "title": "Теория вероятностей",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 215",
+    "parity": "BOTH",
+    "courseId": 38,
+    "courseTitle": "Теория вероятностей",
+    "primaryGroupId": 29,
+    "primaryGroupName": "ПМИ-22-2",
+    "mergedGroupIds": [
+      35
+    ],
+    "mergedGroupNames": [
+      "МО-24-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Теория вероятностей\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-next-38-29",
+    "calendarYear": 2028,
+    "semester": "next",
+    "weekday": 2,
+    "pairIndex": 2,
+    "startTime": "10:10",
+    "endTime": "11:40",
+    "title": "Теория вероятностей",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 216",
+    "parity": "ODD",
+    "courseId": 38,
+    "courseTitle": "Теория вероятностей",
+    "primaryGroupId": 29,
+    "primaryGroupName": "ПМИ-22-2",
+    "mergedGroupIds": [
+      35
+    ],
+    "mergedGroupNames": [
+      "МО-24-2"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Теория вероятностей\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-current-39-30",
+    "calendarYear": 2026,
+    "semester": "current",
+    "weekday": 2,
+    "pairIndex": 2,
+    "startTime": "10:10",
+    "endTime": "11:40",
+    "title": "Информационная безопасность",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 218",
+    "parity": "BOTH",
+    "courseId": 39,
+    "courseTitle": "Информационная безопасность",
+    "primaryGroupId": 30,
+    "primaryGroupName": "ИБ-23-1",
+    "mergedGroupIds": [
+      36
+    ],
+    "mergedGroupNames": [
+      "СА-25-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Информационная безопасность\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-next-39-30",
+    "calendarYear": 2026,
+    "semester": "next",
+    "weekday": 3,
+    "pairIndex": 3,
+    "startTime": "12:10",
+    "endTime": "13:40",
+    "title": "Информационная безопасность",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 219",
+    "parity": "ODD",
+    "courseId": 39,
+    "courseTitle": "Информационная безопасность",
+    "primaryGroupId": 30,
+    "primaryGroupName": "ИБ-23-1",
+    "mergedGroupIds": [
+      36
+    ],
+    "mergedGroupNames": [
+      "СА-25-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Информационная безопасность\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-current-39-30",
+    "calendarYear": 2027,
+    "semester": "current",
+    "weekday": 2,
+    "pairIndex": 2,
+    "startTime": "10:10",
+    "endTime": "11:40",
+    "title": "Информационная безопасность",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 218",
+    "parity": "BOTH",
+    "courseId": 39,
+    "courseTitle": "Информационная безопасность",
+    "primaryGroupId": 30,
+    "primaryGroupName": "ИБ-23-1",
+    "mergedGroupIds": [
+      36
+    ],
+    "mergedGroupNames": [
+      "СА-25-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Информационная безопасность\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-next-39-30",
+    "calendarYear": 2027,
+    "semester": "next",
+    "weekday": 3,
+    "pairIndex": 3,
+    "startTime": "12:10",
+    "endTime": "13:40",
+    "title": "Информационная безопасность",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 219",
+    "parity": "ODD",
+    "courseId": 39,
+    "courseTitle": "Информационная безопасность",
+    "primaryGroupId": 30,
+    "primaryGroupName": "ИБ-23-1",
+    "mergedGroupIds": [
+      36
+    ],
+    "mergedGroupNames": [
+      "СА-25-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Информационная безопасность\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-current-39-30",
+    "calendarYear": 2028,
+    "semester": "current",
+    "weekday": 2,
+    "pairIndex": 2,
+    "startTime": "10:10",
+    "endTime": "11:40",
+    "title": "Информационная безопасность",
+    "type": "Лекция",
+    "format": "Очный",
+    "location": "Аудитория 218",
+    "parity": "BOTH",
+    "courseId": 39,
+    "courseTitle": "Информационная безопасность",
+    "primaryGroupId": 30,
+    "primaryGroupName": "ИБ-23-1",
+    "mergedGroupIds": [
+      36
+    ],
+    "mergedGroupNames": [
+      "СА-25-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Информационная безопасность\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-next-39-30",
+    "calendarYear": 2028,
+    "semester": "next",
+    "weekday": 3,
+    "pairIndex": 3,
+    "startTime": "12:10",
+    "endTime": "13:40",
+    "title": "Информационная безопасность",
+    "type": "Практика",
+    "format": "Очный",
+    "location": "Аудитория 219",
+    "parity": "ODD",
+    "courseId": 39,
+    "courseTitle": "Информационная безопасность",
+    "primaryGroupId": 30,
+    "primaryGroupName": "ИБ-23-1",
+    "mergedGroupIds": [
+      36
+    ],
+    "mergedGroupNames": [
+      "СА-25-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Информационная безопасность\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-current-40-31",
+    "calendarYear": 2026,
+    "semester": "current",
+    "weekday": 3,
+    "pairIndex": 3,
+    "startTime": "12:10",
+    "endTime": "13:40",
+    "title": "Сетевые технологии",
+    "type": "Лекция",
+    "format": "Смешанный",
+    "location": "Аудитория 221",
+    "parity": "BOTH",
+    "courseId": 40,
+    "courseTitle": "Сетевые технологии",
+    "primaryGroupId": 31,
+    "primaryGroupName": "ИБ-23-2",
+    "mergedGroupIds": [
+      36
+    ],
+    "mergedGroupNames": [
+      "СА-25-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Сетевые технологии\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-next-40-31",
+    "calendarYear": 2026,
+    "semester": "next",
+    "weekday": 4,
+    "pairIndex": 4,
+    "startTime": "13:50",
+    "endTime": "15:20",
+    "title": "Сетевые технологии",
+    "type": "Практика",
+    "format": "Смешанный",
+    "location": "Аудитория 222",
+    "parity": "ODD",
+    "courseId": 40,
+    "courseTitle": "Сетевые технологии",
+    "primaryGroupId": 31,
+    "primaryGroupName": "ИБ-23-2",
+    "mergedGroupIds": [
+      36
+    ],
+    "mergedGroupNames": [
+      "СА-25-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Сетевые технологии\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-current-40-31",
+    "calendarYear": 2027,
+    "semester": "current",
+    "weekday": 3,
+    "pairIndex": 3,
+    "startTime": "12:10",
+    "endTime": "13:40",
+    "title": "Сетевые технологии",
+    "type": "Лекция",
+    "format": "Смешанный",
+    "location": "Аудитория 221",
+    "parity": "BOTH",
+    "courseId": 40,
+    "courseTitle": "Сетевые технологии",
+    "primaryGroupId": 31,
+    "primaryGroupName": "ИБ-23-2",
+    "mergedGroupIds": [
+      36
+    ],
+    "mergedGroupNames": [
+      "СА-25-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Сетевые технологии\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-next-40-31",
+    "calendarYear": 2027,
+    "semester": "next",
+    "weekday": 4,
+    "pairIndex": 4,
+    "startTime": "13:50",
+    "endTime": "15:20",
+    "title": "Сетевые технологии",
+    "type": "Практика",
+    "format": "Смешанный",
+    "location": "Аудитория 222",
+    "parity": "ODD",
+    "courseId": 40,
+    "courseTitle": "Сетевые технологии",
+    "primaryGroupId": 31,
+    "primaryGroupName": "ИБ-23-2",
+    "mergedGroupIds": [
+      36
+    ],
+    "mergedGroupNames": [
+      "СА-25-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Сетевые технологии\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-current-40-31",
+    "calendarYear": 2028,
+    "semester": "current",
+    "weekday": 3,
+    "pairIndex": 3,
+    "startTime": "12:10",
+    "endTime": "13:40",
+    "title": "Сетевые технологии",
+    "type": "Лекция",
+    "format": "Смешанный",
+    "location": "Аудитория 221",
+    "parity": "BOTH",
+    "courseId": 40,
+    "courseTitle": "Сетевые технологии",
+    "primaryGroupId": 31,
+    "primaryGroupName": "ИБ-23-2",
+    "mergedGroupIds": [
+      36
+    ],
+    "mergedGroupNames": [
+      "СА-25-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Сетевые технологии\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-next-40-31",
+    "calendarYear": 2028,
+    "semester": "next",
+    "weekday": 4,
+    "pairIndex": 4,
+    "startTime": "13:50",
+    "endTime": "15:20",
+    "title": "Сетевые технологии",
+    "type": "Практика",
+    "format": "Смешанный",
+    "location": "Аудитория 222",
+    "parity": "ODD",
+    "courseId": 40,
+    "courseTitle": "Сетевые технологии",
+    "primaryGroupId": 31,
+    "primaryGroupName": "ИБ-23-2",
+    "mergedGroupIds": [
+      36
+    ],
+    "mergedGroupNames": [
+      "СА-25-1"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Сетевые технологии\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-current-41-32",
+    "calendarYear": 2026,
+    "semester": "current",
+    "weekday": 4,
+    "pairIndex": 4,
+    "startTime": "13:50",
+    "endTime": "15:20",
+    "title": "Эконометрика",
+    "type": "Лекция",
+    "format": "Очно-заочный",
+    "location": "Аудитория 224",
+    "parity": "BOTH",
+    "courseId": 41,
+    "courseTitle": "Эконометрика",
+    "primaryGroupId": 32,
+    "primaryGroupName": "ЭК-24-1",
+    "mergedGroupIds": [
+      37
+    ],
+    "mergedGroupNames": [
+      "УП-24-3"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Эконометрика\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-next-41-32",
+    "calendarYear": 2026,
+    "semester": "next",
+    "weekday": 5,
+    "pairIndex": 5,
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "title": "Эконометрика",
+    "type": "Практика",
+    "format": "Очно-заочный",
+    "location": "Аудитория 225",
+    "parity": "ODD",
+    "courseId": 41,
+    "courseTitle": "Эконометрика",
+    "primaryGroupId": 32,
+    "primaryGroupName": "ЭК-24-1",
+    "mergedGroupIds": [
+      37
+    ],
+    "mergedGroupNames": [
+      "УП-24-3"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Эконометрика\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-current-41-32",
+    "calendarYear": 2027,
+    "semester": "current",
+    "weekday": 4,
+    "pairIndex": 4,
+    "startTime": "13:50",
+    "endTime": "15:20",
+    "title": "Эконометрика",
+    "type": "Лекция",
+    "format": "Очно-заочный",
+    "location": "Аудитория 224",
+    "parity": "BOTH",
+    "courseId": 41,
+    "courseTitle": "Эконометрика",
+    "primaryGroupId": 32,
+    "primaryGroupName": "ЭК-24-1",
+    "mergedGroupIds": [
+      37
+    ],
+    "mergedGroupNames": [
+      "УП-24-3"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Эконометрика\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-next-41-32",
+    "calendarYear": 2027,
+    "semester": "next",
+    "weekday": 5,
+    "pairIndex": 5,
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "title": "Эконометрика",
+    "type": "Практика",
+    "format": "Очно-заочный",
+    "location": "Аудитория 225",
+    "parity": "ODD",
+    "courseId": 41,
+    "courseTitle": "Эконометрика",
+    "primaryGroupId": 32,
+    "primaryGroupName": "ЭК-24-1",
+    "mergedGroupIds": [
+      37
+    ],
+    "mergedGroupNames": [
+      "УП-24-3"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Эконометрика\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-current-41-32",
+    "calendarYear": 2028,
+    "semester": "current",
+    "weekday": 4,
+    "pairIndex": 4,
+    "startTime": "13:50",
+    "endTime": "15:20",
+    "title": "Эконометрика",
+    "type": "Лекция",
+    "format": "Очно-заочный",
+    "location": "Аудитория 224",
+    "parity": "BOTH",
+    "courseId": 41,
+    "courseTitle": "Эконометрика",
+    "primaryGroupId": 32,
+    "primaryGroupName": "ЭК-24-1",
+    "mergedGroupIds": [
+      37
+    ],
+    "mergedGroupNames": [
+      "УП-24-3"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Эконометрика\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-next-41-32",
+    "calendarYear": 2028,
+    "semester": "next",
+    "weekday": 5,
+    "pairIndex": 5,
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "title": "Эконометрика",
+    "type": "Практика",
+    "format": "Очно-заочный",
+    "location": "Аудитория 225",
+    "parity": "ODD",
+    "courseId": 41,
+    "courseTitle": "Эконометрика",
+    "primaryGroupId": 32,
+    "primaryGroupName": "ЭК-24-1",
+    "mergedGroupIds": [
+      37
+    ],
+    "mergedGroupNames": [
+      "УП-24-3"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Эконометрика\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-current-42-33",
+    "calendarYear": 2026,
+    "semester": "current",
+    "weekday": 5,
+    "pairIndex": 5,
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "title": "Управление проектами",
+    "type": "Лекция",
+    "format": "Очно-заочный",
+    "location": "Аудитория 227",
+    "parity": "BOTH",
+    "courseId": 42,
+    "courseTitle": "Управление проектами",
+    "primaryGroupId": 33,
+    "primaryGroupName": "ЭК-24-2",
+    "mergedGroupIds": [
+      37
+    ],
+    "mergedGroupNames": [
+      "УП-24-3"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Управление проектами\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2026-next-42-33",
+    "calendarYear": 2026,
+    "semester": "next",
+    "weekday": 1,
+    "pairIndex": 1,
+    "startTime": "08:30",
+    "endTime": "10:00",
+    "title": "Управление проектами",
+    "type": "Практика",
+    "format": "Очно-заочный",
+    "location": "Аудитория 228",
+    "parity": "ODD",
+    "courseId": 42,
+    "courseTitle": "Управление проектами",
+    "primaryGroupId": 33,
+    "primaryGroupName": "ЭК-24-2",
+    "mergedGroupIds": [
+      37
+    ],
+    "mergedGroupNames": [
+      "УП-24-3"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Управление проектами\" на 2026 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-current-42-33",
+    "calendarYear": 2027,
+    "semester": "current",
+    "weekday": 5,
+    "pairIndex": 5,
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "title": "Управление проектами",
+    "type": "Лекция",
+    "format": "Очно-заочный",
+    "location": "Аудитория 227",
+    "parity": "BOTH",
+    "courseId": 42,
+    "courseTitle": "Управление проектами",
+    "primaryGroupId": 33,
+    "primaryGroupName": "ЭК-24-2",
+    "mergedGroupIds": [
+      37
+    ],
+    "mergedGroupNames": [
+      "УП-24-3"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Управление проектами\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2027-next-42-33",
+    "calendarYear": 2027,
+    "semester": "next",
+    "weekday": 1,
+    "pairIndex": 1,
+    "startTime": "08:30",
+    "endTime": "10:00",
+    "title": "Управление проектами",
+    "type": "Практика",
+    "format": "Очно-заочный",
+    "location": "Аудитория 228",
+    "parity": "ODD",
+    "courseId": 42,
+    "courseTitle": "Управление проектами",
+    "primaryGroupId": 33,
+    "primaryGroupName": "ЭК-24-2",
+    "mergedGroupIds": [
+      37
+    ],
+    "mergedGroupNames": [
+      "УП-24-3"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Управление проектами\" на 2027 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-current-42-33",
+    "calendarYear": 2028,
+    "semester": "current",
+    "weekday": 5,
+    "pairIndex": 5,
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "title": "Управление проектами",
+    "type": "Лекция",
+    "format": "Очно-заочный",
+    "location": "Аудитория 227",
+    "parity": "BOTH",
+    "courseId": 42,
+    "courseTitle": "Управление проектами",
+    "primaryGroupId": 33,
+    "primaryGroupName": "ЭК-24-2",
+    "mergedGroupIds": [
+      37
+    ],
+    "mergedGroupNames": [
+      "УП-24-3"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Управление проектами\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  },
+  {
+    "id": "2028-next-42-33",
+    "calendarYear": 2028,
+    "semester": "next",
+    "weekday": 1,
+    "pairIndex": 1,
+    "startTime": "08:30",
+    "endTime": "10:00",
+    "title": "Управление проектами",
+    "type": "Практика",
+    "format": "Очно-заочный",
+    "location": "Аудитория 228",
+    "parity": "ODD",
+    "courseId": 42,
+    "courseTitle": "Управление проектами",
+    "primaryGroupId": 33,
+    "primaryGroupName": "ЭК-24-2",
+    "mergedGroupIds": [
+      37
+    ],
+    "mergedGroupNames": [
+      "УП-24-3"
+    ],
+    "notes": "Демо-шаблон расписания для курса \"Управление проектами\" на 2028 год.",
+    "createdById": 96,
+    "createdByName": "teacher1@lms.local"
+  }
+]

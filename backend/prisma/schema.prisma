@@ -1,0 +1,315 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  passwordHash String
+  role         String   @default("STUDENT")
+  fullName     String?
+  studentCode  String?  @unique
+  faculty      String?
+  staffTitle   String?
+  staffCategory String?
+  accessSystemsJson String @default("[]")
+  permissionsJson String @default("[]")
+  managedGroupIdsJson String @default("[]")
+  createdAt    DateTime @default(now())
+  groupId      Int?
+
+  group StudentGroup? @relation(fields: [groupId], references: [id])
+
+  courses     Course[]
+  enrollments Enrollment[]
+
+  assignmentsCreated Assignment[] @relation("TeacherAssignments")
+  submissions        Submission[]
+
+  testsCreated Test[] @relation("TeacherTests")
+  attempts     Attempt[]
+  testAttemptAllowances TestAttemptAllowance[]
+
+  notificationsCreated Notification[] @relation("NotificationAuthor")
+  notificationsTargeted Notification[] @relation("NotificationTargetStudent")
+  courseGrades   CourseGrade[]
+
+  @@index([groupId])
+  @@index([role])
+}
+
+model StudentGroup {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  faculty   String   @default("")
+  createdAt DateTime @default(now())
+
+  students      User[]
+  notifications Notification[]
+}
+
+model Course {
+  id        Int      @id @default(autoincrement())
+  title     String
+  subjectName String @default("")
+  subjectCode String @default("")
+  courseNumber Int?
+  semester String @default("")
+  department String @default("")
+  studyYear String @default("")
+  format String @default("")
+  campus String @default("")
+  createdAt DateTime @default(now())
+
+  teacherId Int
+  teacher   User @relation(fields: [teacherId], references: [id])
+
+  enrollments   Enrollment[]
+  assignments   Assignment[]
+  tests         Test[]
+  notifications Notification[]
+  grades        CourseGrade[]
+
+  @@index([teacherId])
+}
+
+model Enrollment {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+
+  courseId  Int
+  studentId Int
+
+  course  Course @relation(fields: [courseId], references: [id])
+  student User   @relation(fields: [studentId], references: [id])
+
+  @@unique([courseId, studentId])
+  @@index([studentId])
+  @@index([courseId])
+}
+
+model CourseGrade {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  courseId  Int
+  studentId Int
+
+  module1Score Int?
+  module2Score Int?
+  module3Score Int?
+  notes        String @default("")
+
+  course  Course @relation(fields: [courseId], references: [id])
+  student User   @relation(fields: [studentId], references: [id])
+
+  @@unique([courseId, studentId])
+  @@index([courseId])
+  @@index([studentId])
+}
+
+model Assignment {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String    @default("")
+  dueDate     DateTime?
+  createdAt   DateTime  @default(now())
+
+  courseId Int
+  course   Course @relation(fields: [courseId], references: [id])
+
+  teacherId Int
+  teacher   User @relation("TeacherAssignments", fields: [teacherId], references: [id])
+
+  submissions Submission[]
+
+  @@index([courseId])
+  @@index([teacherId])
+}
+
+model Submission {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+
+  assignmentId Int
+  assignment   Assignment @relation(fields: [assignmentId], references: [id])
+
+  studentId Int
+  student   User @relation(fields: [studentId], references: [id])
+
+  contentText String   @default("")
+  attachmentsJson String @default("[]")
+  grade       Int?
+  feedback    String   @default("")
+  gradedAt    DateTime?
+
+  @@unique([assignmentId, studentId])
+  @@index([studentId])
+  @@index([assignmentId])
+}
+
+model Test {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String   @default("")
+  instructions String  @default("")
+  isPublished Boolean  @default(false)
+  availableFrom DateTime?
+  timeLimitMinutes Int @default(20)
+  tabSwitchLimit Int   @default(3)
+  attemptLimit Int     @default(1)
+  createdAt   DateTime @default(now())
+
+  courseId Int
+  course   Course @relation(fields: [courseId], references: [id])
+
+  teacherId Int
+  teacher   User @relation("TeacherTests", fields: [teacherId], references: [id])
+
+  questions Question[]
+  attempts  Attempt[]
+  attemptAllowances TestAttemptAllowance[]
+
+  @@index([courseId])
+  @@index([teacherId])
+}
+
+model Question {
+  id     Int    @id @default(autoincrement())
+  type   String
+  text   String
+  configJson String @default("{}")
+  points Int    @default(1)
+  order  Int    @default(0)
+
+  testId Int
+  test   Test @relation(fields: [testId], references: [id])
+
+  options Option[]
+  answers Answer[]
+
+  @@index([testId])
+}
+
+model Option {
+  id        Int     @id @default(autoincrement())
+  text      String
+  isCorrect Boolean @default(false)
+
+  questionId Int
+  question   Question @relation(fields: [questionId], references: [id])
+
+  selections AnswerSelection[]
+
+  @@index([questionId])
+}
+
+model Attempt {
+  id         Int       @id @default(autoincrement())
+  startedAt  DateTime  @default(now())
+  finishedAt DateTime?
+  autoSubmittedAt DateTime?
+  score      Int       @default(0)
+  maxScore   Int       @default(0)
+  tabSwitchCount Int   @default(0)
+  activityLogJson String @default("[]")
+
+  testId Int
+  test   Test @relation(fields: [testId], references: [id])
+
+  studentId Int
+  student   User @relation(fields: [studentId], references: [id])
+
+  answers Answer[]
+
+  @@index([testId])
+  @@index([studentId])
+}
+
+model TestAttemptAllowance {
+  id            Int      @id @default(autoincrement())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  testId        Int
+  studentId     Int
+  extraAttempts Int      @default(0)
+  grantedById   Int?
+
+  test          Test @relation(fields: [testId], references: [id])
+  student       User @relation(fields: [studentId], references: [id])
+
+  @@unique([testId, studentId])
+  @@index([testId])
+  @@index([studentId])
+}
+
+model Answer {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+
+  attemptId Int
+  attempt   Attempt @relation(fields: [attemptId], references: [id])
+
+  questionId Int
+  question   Question @relation(fields: [questionId], references: [id])
+  openScore  Int?     @default(0)
+  manualScore Int?
+  reviewStatus String @default("AUTO")
+  reviewComment String @default("")
+  reviewReason String @default("")
+  feedbackJson String @default("{}")
+  reviewedAt DateTime?
+  reviewedById Int?
+
+  textAnswer String @default("")
+  responseJson String @default("{}")
+  attachmentsJson String @default("[]")
+
+  selections AnswerSelection[]
+
+  @@unique([attemptId, questionId])
+  @@index([questionId])
+  @@index([attemptId])
+}
+
+model AnswerSelection {
+  answerId Int
+  optionId Int
+
+  answer Answer @relation(fields: [answerId], references: [id])
+  option Option @relation(fields: [optionId], references: [id])
+
+  @@id([answerId, optionId])
+  @@index([optionId])
+}
+
+model Notification {
+  id        Int      @id @default(autoincrement())
+  title     String
+  body      String   @default("")
+  audience  String
+  createdAt DateTime @default(now())
+
+  courseId Int
+  course   Course @relation(fields: [courseId], references: [id])
+
+  createdById Int
+  createdBy   User @relation("NotificationAuthor", fields: [createdById], references: [id])
+
+  groupId Int?
+  group   StudentGroup? @relation(fields: [groupId], references: [id])
+
+  studentId Int?
+  student   User? @relation("NotificationTargetStudent", fields: [studentId], references: [id])
+
+  @@index([courseId])
+  @@index([groupId])
+  @@index([studentId])
+}
